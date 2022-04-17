@@ -3,7 +3,7 @@ dotenv.config()
 
 import axios from 'axios';
 import moment from "moment";
-import suffix from "../type/action_types"
+import {suffix} from "../type/action_types.js"
 
 export const get_weather_status = async () => {
   const weather_raw_data = await GetWeatherData(suffix.weather_status);
@@ -69,4 +69,4 @@ const GetWeatherRawData = async (initialtime, finaltime,parameter) => {
 // (async () => console.log(await GetWeatherRawData("2022-04-16T00:00:00Z","2022-04-16T07:00:00Z","t_2m:C")) )();
 // (async () => console.log(await GetWeatherData(suffix.weather_status) ) )();
 // (async () => console.log(await get_temperature() ) )();
-(async () => console.log(await get_weather_status() ) )();
+// (async () => console.log(await get_weather_status() ) )();
